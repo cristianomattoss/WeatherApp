@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima do Tempo</title>
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>Descubra o clima da sua cidade</h1>
+            <p>Consulte as condições climáticas em tempo real.</p>
+        </header>
+
+        <section class="search-container">
+
+            <label for="city">Cidade</label>
+
+            <div class="search-box">
+                <input type="text" id="city" placeholder="Digite o nome da cidade...">
+
+                <button id="search-btn">Pesquisar</button>
+            </div>
+
+        </section>
+
+        <h2 id="city-name">Rio de Janeiro</h2>
+
+        <section class="weather-card">
+
+            <div class="weather-description">
+
+                <p>☁️ Descrição do clima</p>
+
+                <p id="description">
+                    Céu limpo
+                </p>
+
+            </div>
+
+            <div class="weather-icon">
+
+                <img
+                    id="weather-icon"
+                    src=""
+                    alt="Ícone do clima"
+                >
+
+            </div>
+
+            <div class="weather-info">
+
+                <div class="info">
+                    <span>Temperatura</span>
+                    <strong id="temperature">28°C</strong>
+                </div>
+
+                <div class="info">
+                    <span>Umidade</span>
+                    <strong id="humidity">72%</strong>
+                </div>
+
+                <div class="info">
+                    <span>Velocidade do vento</span>
+                    <strong id="wind">15 km/h</strong>
+                </div>
+
+                <div class="info">
+                    <span>Nascer do sol</span>
+                    <strong id="sunrise">06:18</strong>
+                </div>
+
+                <div class="info">
+                    <span>Pôr do sol</span>
+                    <strong id="sunset">17:34</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
