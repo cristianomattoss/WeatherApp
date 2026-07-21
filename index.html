@@ -8,81 +8,69 @@
 </head>
 <body>
 
-    <main class="container">
+    <header class="header">
+        <h1>Descubra o clima da sua cidade</h1>
+        <p>Consulte as condições climáticas em tempo real.</p>
+    </header>
 
-        <header class="header">
-            <h1>Descubra o clima da sua cidade</h1>
-            <p>Consulte as condições climáticas em tempo real.</p>
-        </header>
+    <section class="search-container">
+        <input type="text" id="city" placeholder="Digite o nome da cidade...">
+        <button id="search-btn">Pesquisar</button>
+    </section>
 
-        <section class="search-container">
+    <h2 id="city-name">Rio de Janeiro</h2>
 
-            <label for="city">Cidade</label>
+    <section class="weather-card">
 
-            <div class="search-box">
-                <input type="text" id="city" placeholder="Digite o nome da cidade...">
+        <div class="weather-description">
 
-                <button id="search-btn">Pesquisar</button>
+            <p>☁️ Descrição do clima</p>
+
+            <p id="description">
+                Céu limpo
+            </p>
+
+        </div>
+
+        <div class="weather-icon">
+
+            <img
+                id="weather-icon"
+                src=""
+                alt="Ícone do clima"
+            >
+
+        </div>
+
+        <div class="weather-info">
+
+            <div class="info">
+                <span>Temperatura</span>
+                <strong id="temperature">28°C</strong>
             </div>
 
-        </section>
-
-        <h2 id="city-name">Rio de Janeiro</h2>
-
-        <section class="weather-card">
-
-            <div class="weather-description">
-
-                <p>☁️ Descrição do clima</p>
-
-                <p id="description">
-                    Céu limpo
-                </p>
-
+            <div class="info">
+                <span>Umidade</span>
+                <strong id="humidity">72%</strong>
             </div>
 
-            <div class="weather-icon">
-
-                <img
-                    id="weather-icon"
-                    src=""
-                    alt="Ícone do clima"
-                >
-
+            <div class="info">
+                <span>Velocidade do vento</span>
+                <strong id="wind">15 km/h</strong>
             </div>
 
-            <div class="weather-info">
-
-                <div class="info">
-                    <span>Temperatura</span>
-                    <strong id="temperature">28°C</strong>
-                </div>
-
-                <div class="info">
-                    <span>Umidade</span>
-                    <strong id="humidity">72%</strong>
-                </div>
-
-                <div class="info">
-                    <span>Velocidade do vento</span>
-                    <strong id="wind">15 km/h</strong>
-                </div>
-
-                <div class="info">
-                    <span>Nascer do sol</span>
-                    <strong id="sunrise">06:18</strong>
-                </div>
-
-                <div class="info">
-                    <span>Pôr do sol</span>
-                    <strong id="sunset">17:34</strong>
-                </div>
-
+            <div class="info">
+                <span>Nascer do sol</span>
+                <strong id="sunrise">06:18</strong>
             </div>
 
-        </section>
+            <div class="info">
+                <span>Pôr do sol</span>
+                <strong id="sunset">17:34</strong>
+            </div>
 
-    </main>
+        </div>
 
+    </section>
 </body>
 </html>
