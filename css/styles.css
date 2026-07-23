@@ -81,6 +81,10 @@ body {
 
     z-index: 1000;
 
+    display: block;
+}
+
+.hide {
     display: none;
 }
 

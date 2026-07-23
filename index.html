@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima do Tempo</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
 
@@ -16,14 +17,7 @@
     <section class="search-container">
         <div class="search-box">
             <input type="text" id="city" placeholder="Digite o nome da cidade..." autocomplete="off">
-            <div id="suggestions" class="suggestions">
-                <div class="suggestion-item">Rio de Janeiro</div>
-                <div class="suggestion-item">Rio Claro</div>
-                <div class="suggestion-item">Rio Branco</div>
-                <div class="suggestion-item">Rio de Janeiro</div>
-                <div class="suggestion-item">Rio Claro</div>
-                <div class="suggestion-item">Rio Branco</div>
-            </div>
+            <div id="suggestions" class="suggestions hide"></div>
         </div>
         <button id="search-btn">Pesquisar</button>
     </section>
