@@ -35,11 +35,19 @@ function showSuggestions(searchText) {
         const divSuggestionItem = document.createElement("div");
         divSuggestionItem.classList.add("suggestion-item");
         divSuggestionItem.textContent = city;
+
+        divSuggestionItem.addEventListener("click", () => {
+            cityInput.value = city;
+            hideSuggestionsContainer();
+        });
+        
         suggestions.appendChild(divSuggestionItem);
     });
+
     showSuggestionsContainer();
 }
 
+/* EVENTS */
 cityInput.addEventListener("input", () => {
     const searchText = cityInput.value
     showSuggestions(searchText);
