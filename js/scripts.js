@@ -37,9 +37,10 @@ function showSuggestions(searchText) {
         divSuggestionItem.textContent = city;
         suggestions.appendChild(divSuggestionItem);
     });
+    showSuggestionsContainer();
 }
 
 cityInput.addEventListener("input", () => {
     const searchText = cityInput.value
-    showSuggestions(cityInput.value);
+    showSuggestions(searchText);
 });
