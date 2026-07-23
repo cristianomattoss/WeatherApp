@@ -1,5 +1,6 @@
 const cityInput = document.querySelector("#city");
 const suggestions = document.querySelector("#suggestions");
+const searchBox = document.querySelector(".search-box");
 
 const cities = [
     "Rio de Janeiro",
@@ -40,7 +41,7 @@ function showSuggestions(searchText) {
             cityInput.value = city;
             hideSuggestionsContainer();
         });
-        
+
         suggestions.appendChild(divSuggestionItem);
     });
 
@@ -51,4 +52,16 @@ function showSuggestions(searchText) {
 cityInput.addEventListener("input", () => {
     const searchText = cityInput.value
     showSuggestions(searchText);
+});
+
+cityInput.addEventListener("focus", () => {
+    if (cityInput.value.trim() !== "") {
+        showSuggestions(cityInput.value);
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (!searchBox.contains(event.target)) {
+        hideSuggestionsContainer();
+    }
 });
