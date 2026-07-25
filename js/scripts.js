@@ -1,13 +1,15 @@
+import { getCities } from "./api.js";
 const cityInput = document.querySelector("#city");
 const suggestions = document.querySelector("#suggestions");
 const searchBox = document.querySelector(".search-box");
 
-const cities = [
-    "Rio de Janeiro",
-    "Rio Claro",
-    "Rio Branco",
-    "Rio Verde"
-];
+let cities = [];
+
+try {
+    cities = await getCities();
+} catch (error) {
+    console.error("Erro ao carregar cidades:", error);
+}
 
 function showSuggestionsContainer() {
     suggestions.classList.remove("hide");
