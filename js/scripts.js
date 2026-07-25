@@ -1,7 +1,8 @@
-import { getCities } from "./api.js";
+import { getCities, getCoordinates } from "./api.js";
 const cityInput = document.querySelector("#city");
 const suggestions = document.querySelector("#suggestions");
 const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector("#search-btn");
 
 let cities = [];
 
@@ -67,3 +68,7 @@ document.addEventListener("click", (event) => {
         hideSuggestionsContainer();
     }
 });
+
+searchBtn.addEventListener("click", async () => {
+    await getCoordinates(cityInput.value);
+})
