@@ -1,8 +1,17 @@
-import { getCities, getCoordinates } from "./api.js";
+import { getCities, getWeatherData } from "./api.js";
 const cityInput = document.querySelector("#city");
 const suggestions = document.querySelector("#suggestions");
 const searchBox = document.querySelector(".search-box");
 const searchBtn = document.querySelector("#search-btn");
+
+const cityName = document.querySelector("#city-name");
+const description = document.querySelector("#description");
+const weatherIcon = document.querySelector("#weather-icon");
+const temperature = document.querySelector("#temperature");
+const humidity = document.querySelector("#humidity");
+const wind = document.querySelector("#wind");
+const sunrise = document.querySelector("#sunrise");
+const sunset = document.querySelector("#sunset");
 
 let cities = [];
 
@@ -51,6 +60,22 @@ function showSuggestions(searchText) {
     showSuggestionsContainer();
 }
 
+function renderWeather(weatherData) {
+    description.textContent = weatherData.description;
+    temperature.textContent = `${weatherData.temperature}°C`;
+    humidity.textContent = `${weatherData.humidity}%`;
+    wind.textContent = `${weatherData.windSpeed} m/s`;
+    weatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
+    
+    const date = new Date(weatherData.sunrise * 1000);
+    sunrise.textContent = date.toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"});
+
+    const sunsetDate = new Date(weatherData.sunset * 1000);
+    sunset.textContent = sunsetDate.toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"});
+
+    cityName.textContent = cityInput.value
+}
+
 /* EVENTS */
 cityInput.addEventListener("input", () => {
     const searchText = cityInput.value
@@ -70,5 +95,7 @@ document.addEventListener("click", (event) => {
 });
 
 searchBtn.addEventListener("click", async () => {
-    await getCoordinates(cityInput.value);
+    const weatherData = await getWeatherData(cityInput.value);
+    renderWeather(weatherData);
 })
+
