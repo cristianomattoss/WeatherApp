@@ -128,20 +128,93 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* WEATHER SUMMARY */
+
+.weather-summary {
+    width: 100%;
+    max-width: 1000px;
+    height: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 4rem;
+
+    background: #2196f3;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+
+    margin-bottom: 1rem;
+}
+
+.summary-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.summary-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding-right: 4rem;
+    border-right: 1px solid #fff;
+}
+
+.weather-summary-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.summary-description {
+    color: #fff;
+    font-size: .95rem;
+    text-transform: capitalize;
+}
+
+.summary-place h2 {
+    color: #fff;
+    margin-bottom: .3rem;
+}
+
+.summary-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-right span:first-child {
+    color: #fff;
+    font-size: .95rem;
+}
+
+.summary-temperature {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+
+    margin: .5rem 0;
+}
+
+.summary-right span:last-child {
+    color: #fff;
+}
+
 /* CARD */
 
 .weather-card {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    border-top: 1px solid #eee;
-    padding-top: 1.5rem;
+    max-width: 1000px;
+    justify-content:space-between;
 }
 
 /* INFORMAÇÕES */
 .info {
-    width: 150px;
-    min-height: 150px;
+    width: 220px;
+    min-height: 120px;
 
     display: flex;
     flex-direction: column;
@@ -160,23 +233,6 @@ body {
 
 .info strong {
     color: #222;
-}
-
-/* DESCRIÇÃO */
-
-.weather-description {
-    gap: 1rem;
-}
-
-.weather-description p:first-child {
-    font-weight: bold;
-    color: #555;
-}
-
-#description {
-    margin-top: .5rem;
-    color: #777;
-    font-size: 1.1rem;
 }
 
 /* RESPONSIVO */
