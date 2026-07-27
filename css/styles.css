@@ -84,10 +84,6 @@ body {
     display: block;
 }
 
-.hide {
-    display: none;
-}
-
 .suggestion-item {
     padding: .8rem 1rem;
     cursor: pointer;
@@ -255,4 +251,8 @@ body {
     .search-container {
         width: 100%;
     }
+}
+
+.hide {
+    display: none;
 }

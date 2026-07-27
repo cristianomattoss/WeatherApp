@@ -3,11 +3,14 @@ const cityInput = document.querySelector("#city");
 const suggestions = document.querySelector("#suggestions");
 const searchBox = document.querySelector(".search-box");
 const searchBtn = document.querySelector("#search-btn");
+const weatherSummary = document.querySelector(".weather-summary");
+const weatherCard = document.querySelector(".weather-card");
 
-const cityName = document.querySelector("#city-name");
-const description = document.querySelector("#description");
-const weatherIcon = document.querySelector("#weather-icon");
-const temperature = document.querySelector("#temperature");
+const summaryCityName = document.querySelector("#summary-city-name");
+const summaryDescription = document.querySelector("#summary-description");
+const summaryWeatherIcon = document.querySelector("#weather-summary-icon");
+const summaryTemperature = document.querySelector("#summary-temperature");
+
 const humidity = document.querySelector("#humidity");
 const wind = document.querySelector("#wind");
 const sunrise = document.querySelector("#sunrise");
@@ -61,11 +64,13 @@ function showSuggestions(searchText) {
 }
 
 function renderWeather(weatherData) {
-    description.textContent = weatherData.description;
-    temperature.textContent = `${weatherData.temperature}°C`;
+    summaryCityName.textContent = cityInput.value;
+    summaryDescription.textContent = weatherData.description;
+    summaryTemperature.textContent = `${Math.round(weatherData.temperature)}°C`;
+    summaryWeatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
+
     humidity.textContent = `${weatherData.humidity}%`;
     wind.textContent = `${weatherData.windSpeed} m/s`;
-    weatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
     
     const date = new Date(weatherData.sunrise * 1000);
     sunrise.textContent = date.toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"});
@@ -73,7 +78,8 @@ function renderWeather(weatherData) {
     const sunsetDate = new Date(weatherData.sunset * 1000);
     sunset.textContent = sunsetDate.toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"});
 
-    cityName.textContent = cityInput.value
+    weatherSummary.classList.remove("hide");
+    weatherCard.classList.remove("hide");
 }
 
 /* EVENTS */
