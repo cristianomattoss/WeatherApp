@@ -17,7 +17,7 @@ export async function getWeatherData(city) {
     const data = await response.json();
 
     const {description, icon} = data.weather[0];
-    const {temp: temperature, humidity} = data.main;
+    const {temp: temperature, humidity, feels_like: feelsLike} = data.main;
     const windSpeed = data.wind.speed;
     const {sunrise, sunset} = data.sys;
 
@@ -25,6 +25,7 @@ export async function getWeatherData(city) {
         description,
         icon,
         temperature,
+        feelsLike,
         humidity,
         windSpeed,
         sunrise,

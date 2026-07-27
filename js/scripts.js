@@ -10,6 +10,7 @@ const summaryCityName = document.querySelector("#summary-city-name");
 const summaryDescription = document.querySelector("#summary-description");
 const summaryWeatherIcon = document.querySelector("#weather-summary-icon");
 const summaryTemperature = document.querySelector("#summary-temperature");
+const feelsLike = document.querySelector("#feels-like");
 
 const humidity = document.querySelector("#humidity");
 const wind = document.querySelector("#wind");
@@ -68,6 +69,7 @@ function renderWeather(weatherData) {
     summaryDescription.textContent = weatherData.description;
     summaryTemperature.textContent = `${Math.round(weatherData.temperature)}°C`;
     summaryWeatherIcon.src = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
+    feelsLike.textContent = `${Math.round(weatherData.feelsLike)}°C`;
 
     humidity.textContent = `${weatherData.humidity}%`;
     wind.textContent = `${weatherData.windSpeed} m/s`;

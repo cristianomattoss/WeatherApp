@@ -239,17 +239,60 @@ body {
         font-size: 1.6rem;
     }
 
-    .weather-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .info {
-        margin-bottom: 1rem;
+    .header p {
+        font-size: .9rem;
     }
 
     .search-container {
         width: 100%;
+    }
+
+    /* WEATHER SUMMARY */
+
+    .weather-summary {
+        height: auto;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .summary-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .summary-weather {
+        width: 100%;
+
+        padding-right: 0;
+        padding-bottom: 1rem;
+
+        border-right: none;
+        border-bottom: 1px solid #fff;
+    }
+
+    .summary-place {
+        text-align: center;
+    }
+
+    .summary-right {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* WEATHER CARD */
+
+    .weather-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .info {
+        width: 100%;
+        min-height: 100px;
     }
 }
 
