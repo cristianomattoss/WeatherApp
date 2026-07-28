@@ -162,6 +162,15 @@ body {
     text-transform: capitalize;
 }
 
+.summary-place {
+    display: flex;
+}
+
+.summary-place i {
+    font-size: 1.3rem;
+    color: #fff;
+}
+
 .summary-place h2 {
     color: #fff;
     margin-bottom: .3rem;
