@@ -116,14 +116,6 @@ body {
     background-color: #1976d2;
 }
 
-/* CIDADE */
-
-#city-name {
-    text-align: center;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
 /* WEATHER SUMMARY */
 
 .weather-summary {
@@ -198,6 +190,18 @@ body {
     color: #fff;
 }
 
+/* ICON TEMPERATURE */
+.summary-temperature-container {
+    display: flex;
+    align-items: center;
+    gap: .1rem;
+}
+
+.summary-temperature-container i {
+    font-size: 2rem;
+    color: #fff;
+}
+
 /* CARD */
 
 .weather-card {
@@ -224,11 +228,29 @@ body {
 }
 
 .info span {
-    color: #555;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
 }
 
-.info strong {
-    color: #222;
+/* ICON */
+.info i {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1rem;
+
+    border-radius: 50%;
+
+    background: rgba(33, 150, 243, 0.12);
+
+    color: #2196f3;
+
+    font-size: 1.4rem;
 }
 
 /* RESPONSIVO */

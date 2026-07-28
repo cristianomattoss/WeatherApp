@@ -6,6 +6,7 @@
     <title>Clima do Tempo</title>
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css"/>
 </head>
 <body>
 
@@ -34,7 +35,10 @@
         </div>
         <div class="summary-right">
             <span>Temperatura</span>
-            <strong id="summary-temperature" class="summary-temperature"></strong>
+            <div class="summary-temperature-container">
+                <i class="fa-solid fa-temperature-half"></i>
+                <strong id="summary-temperature" class="summary-temperature"></strong>
+            </div>
             <span>
                 Sensação térmica: <strong id="feels-like"></strong>
             </span>
@@ -43,21 +47,25 @@
 
     <section class="weather-card hide">
         <div class="info">
+            <i class="fa-solid fa-droplet"></i>
             <span>Umidade</span>
             <strong id="humidity"></strong>
         </div>
 
         <div class="info">
+            <i class="fa-solid fa-wind"></i>
             <span>Velocidade do vento</span>
             <strong id="wind"></strong>
         </div>
 
         <div class="info">
+            <i class="fa-solid fa-sun"></i>
             <span>Nascer do sol</span>
             <strong id="sunrise"></strong>
         </div>
 
         <div class="info">
+            <i class="fa-solid fa-cloud-sun"></i>
             <span>Pôr do sol</span>
             <strong id="sunset"></strong>
         </div>
